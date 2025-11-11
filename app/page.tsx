@@ -15,7 +15,7 @@ export default function Page() {
           <div className="flex items-center gap-4">
             <div className="h-14 w-14 relative">
               {/* Replace src with your logo path in /public */}
-              <Image src="/ftf-logo.png" alt="Fathers To Founders" fill className="object-contain" priority />
+              <Image src="/F2F Today.png" alt="Fathers To Founders" fill className="object-contain" priority />
             </div>
             <div>
               <h1 className="text-3xl font-bold leading-tight">Fathers To Founders</h1>
