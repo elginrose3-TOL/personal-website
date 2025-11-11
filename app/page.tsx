@@ -13,9 +13,12 @@ export default function Page() {
         <div className="absolute inset-0 bg-[#8B0000]" />
         <div className="relative mx-auto max-w-6xl px-4 py-10 md:flex md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <div className="h-14 w-14 relative">
-              {/* Replace src with your logo path in /public */}
-              <Image src="/F2F Today.png" alt="Fathers To Founders" fill className="object-contain" priority />
+            <div className="relative h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20">
+              {/* If your file has spaces like `F2F Today.png`, either rename it to `ftf-today.png` or URL-encode spaces as `%20`. */}
+              {/* Option A (recommended): /public/ftf-today.png */}
+              {/* <Image src="/ftf-today.png" alt="Fathers To Founders" fill className="object-contain" priority /> */}
+              {/* Option B (keep original name): /public/F2F Today.png */}
+              <Image src="/F2F%20Today.png" alt="Fathers To Founders" fill className="object-contain" priority />
             </div>
             <div>
               <h1 className="text-3xl font-bold leading-tight">Fathers To Founders</h1>
@@ -26,6 +29,27 @@ export default function Page() {
             <p className="text-sm opacity-90">Hello, I'm</p>
             <p className="text-xl font-semibold">Elgin Rose Sr.</p>
             <p className="text-sm opacity-90">Web Developer & Designer</p>
+          </div>
+        </div>
+      {/* Header end actions: Portal CTA */}
+        <div className="relative bg-white/5 backdrop-blur px-4 pb-8">
+          <div className="mx-auto max-w-6xl flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <p className="text-sm md:text-base opacity-95">
+              Visit our main site to learn more about ECM, SoH-ACF pilots, and programs.
+            </p>
+            <a
+              href="https://fatherstofounders.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center rounded-2xl px-6 py-3 font-semibold shadow-xl ring-2 ring-white/20 transition-transform duration-200 hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-white/40 bg-gradient-to-r from-[#8B0000] to-indigo-600 text-white"
+              aria-label="Open Fathers To Founders website in a new tab"
+            >
+              <span className="mr-2">Enter the FTF Portal</span>
+              <span className="relative inline-flex h-3 w-3">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-white/70 opacity-75 animate-ping"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+              </span>
+            </a>
           </div>
         </div>
       </header>
